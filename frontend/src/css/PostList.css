@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+.loading{
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.posts{
+    display: flex;
+    flex-direction: column;
+}
+.post-container{
+    border: 1px solid rgb(72, 72, 72);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.post-title{
+    color: #2382f6;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+}
+.title h1{
+    font-weight: 600;
+}
+.button{
+    margin: 28px 25px;
+}
+.title span{
+    color: #2382f6;
+    font-weight: 800;
+}

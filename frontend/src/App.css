@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+}
+.backButton{
+    background-color: #2382f6;
+    position: absolute;
+    left: 40px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button{
+    border: 0;
+}
+button:focus{
+    outline: 0;
+}
+.deleteButton{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    margin: 0px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.editButton{
+    background-color: #2382f6;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; 
+}
