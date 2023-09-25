@@ -1,0 +1,7 @@
+.all-post{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}

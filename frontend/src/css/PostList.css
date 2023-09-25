@@ -46,3 +46,13 @@
     color: #2382f6;
     font-weight: 800;
 }
+.post-image{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+.all-posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

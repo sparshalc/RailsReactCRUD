@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import '../css/showPost.css'
 const PostDetails = () => {
     const [post, setPost] = useState([])
     const [loading, setLoading] = useState(false)
@@ -22,9 +23,16 @@ const PostDetails = () => {
             <h1>Post<span>Details</span></h1>
         </div>
         <div className="post-container">
-            <div className="all-posts">
-             <h2>{post.title}</h2>
-             <p>{post.body}</p>
+            <div className="all-post">
+                <div className="top">
+                <h2>{post.title}</h2>
+                <p>{post.body}</p>
+                </div>
+                <div className="bottom">
+                {
+                    post.image_url ? <p><img src={post.image_url} className='post-image'/></p> : <h1>No Image Attached</h1>
+                }   
+                </div>
             </div>
         </div>
         <Link to='/' className='backButton'>Go Back</Link>

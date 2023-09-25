@@ -39,8 +39,13 @@ const PostList = () => {
                     return (
                         <div key={id} className="post-container">
                             <div className="all-posts">
+                                <div className="bottom">
+                                <p><img src={post.image_url} className='post-image'/></p>
+                                </div>
+                                <div className="top">
                                 <Link to={`/posts/${post.id}`} className='post-title'>{post.title}</Link>
                                 <p>{post.body}</p>
+                                </div>
                             </div>
                             <div className="button">
                              <button onClick={() => deletePost(post.id)} className='deleteButton'>Delete</button>
