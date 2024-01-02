@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 const PostList = () => {
     const [post, setPost] = useState([])
     const [loading, setLoading] = useState(false)
+    const [search, setSearch] = useState('')
+
     useEffect(() => {
         const fetchpost = async () => {
             setLoading(true)
@@ -15,7 +17,6 @@ const PostList = () => {
         }
         fetchpost()
     }, [])
-
 
     const deletePost = async (id) => {
         const res = await fetch(`http://localhost:3000/api/v1/posts/${id}`,{
@@ -32,12 +33,17 @@ const PostList = () => {
     return (
         <div>
             <div className="title">
-                <h1>Rails<span>React</span> CRUD <br /> with<span>Rails</span>Api</h1>
+                <h1>Rails<span>React</span> CRUD</h1>
+            </div>
+            <div className="search-box">
+                <input type="text" placeholder='Search for posts.....' onChange={(e) => setSearch(e.target.value)} />
             </div>
             <div className="posts">
-                {post.map((post, id) => {
+                {post.filter((post) => {
+                    return search.toLowerCase() === '' ? post : post.title.toLowerCase().includes(search.toLowerCase());
+                }).map((post) => {
                     return (
-                        <div key={id} className="post-container">
+                        <div key={post.id} className="post-container">
                             <div className="all-posts">
                                 <div className="bottom">
                                 <p><img src={post.image_url} className='post-image'/></p>
